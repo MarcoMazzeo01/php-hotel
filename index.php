@@ -70,9 +70,9 @@
         <tr>
       <th scope="row"><?php echo $hotel['name'] ?></th>
       <td><?php echo $hotel['description'] ?></td>
-      <td><?php echo $hotel['parking'] ?></td>
-      <td><?php echo $hotel['vote'] ?></td>
-      <td><?php echo $hotel['distance_to_center'] ?></td>
+      <td><?php echo $hotel['parking'] ? 'Yes' : 'No'; ?></td>
+      <td><?php echo $hotel['vote'] ?> &#9733;</td>
+      <td><?php echo $hotel['distance_to_center'] ?>Km</td>
       <?php endforeach; ?>
     </tr>
         </tbody>
