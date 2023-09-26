@@ -54,16 +54,31 @@
     <div class="container">
     <h1>Hotels</h1>
 
-    <?php foreach($hotels as $hotel): ?>
-        <div><strong> <?php echo $hotel['name'] ?> </strong> 
+    <table class="table">
+    <thead>
+        <tr>
+            
+        <?php foreach($hotels[0] as $key => $value): ?>
 
-        <?php foreach($hotel as $key => $value): ?>
-        <p> <?php echo "<b>{$key}: </b> {$value}" ?></p>
+            <th scope="col"> <?php echo $key ?></th>
         <?php endforeach; ?>
-        
-    </div>
-    <hr>
-    <?php endforeach; ?>
+        </tr>
+    </thead>
+        <tbody>
+
+        <?php foreach($hotels as $hotel): ?>
+        <tr>
+      <th scope="row"><?php echo $hotel['name'] ?></th>
+      <td><?php echo $hotel['description'] ?></td>
+      <td><?php echo $hotel['parking'] ?></td>
+      <td><?php echo $hotel['vote'] ?></td>
+      <td><?php echo $hotel['distance_to_center'] ?></td>
+      <?php endforeach; ?>
+    </tr>
+        </tbody>
+    </table>
+
+
 
     </div>
 </body>
