@@ -52,13 +52,19 @@
 </head>
 <body>
     <div class="container">
-    <?php
+    <h1>Hotels</h1>
 
-    var_dump($hotels)
-    ?>
+    <?php foreach($hotels as $hotel): ?>
+        <div><strong> <?php echo $hotel['name'] ?> </strong> 
+
+        <?php foreach($hotel as $key => $value): ?>
+        <p> <?php echo "<b>{$key}: </b> {$value}" ?></p>
+        <?php endforeach; ?>
+        
+    </div>
+    <hr>
+    <?php endforeach; ?>
+
     </div>
 </body>
 </html>
-
-<?php
-?>
